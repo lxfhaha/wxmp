@@ -1,0 +1,77 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class='user-info'>
+    <view class='user-info-wrap'>
+      <view class='user-img'>
+        <image src='../../assets/img/user.png'></image>
+      </view>
+      <view class='user-account'>
+        欢迎：13465287496
+      </view>
+    </view>
+    <view class='user-nav'>
+      <view class='user-nav-list'>
+        <text class='title'>积分</text>
+        <text class='num'>0</text>
+      </view>
+      <view class='user-nav-list'>
+        <text class='title'>余额</text>
+        <text class='num'>0</text>
+      </view>
+      <view class='user-nav-list'>
+        <text class='title'>优惠券</text>
+        <text class='num'>0</text>
+      </view>
+      <view class='user-nav-list'>
+        <text class='title'>礼品</text>
+        <text class='num'>0</text>
+      </view>
+    </view>
+  </view>
+  <view class='user-order'>
+    <view class='user-order-wrap'>
+      <view class='line-model'>
+        <image src='../../assets/img/order.png'></image>
+        <text class='my-order'>我的订单</text>
+        <text class='all-order'>全部订单</text>
+      </view>
+      <view class='order-list'>
+        <view class='order-list-item'>
+          <image src='../../assets/img/dfk.png'></image>
+          <view>待付款</view>
+        </view>
+        <view class='order-list-item'>
+          <image src='../../assets/img/dfh.png'></image>
+          <view>待发货</view>
+        </view>
+        <view class='order-list-item'>
+          <image src='../../assets/img/dsh.png'></image>
+          <view>待收货</view>
+        </view>
+        <view class='order-list-item'>
+          <image src='../../assets/img/dpj.png'></image>
+          <view>待评价</view>
+        </view>
+        <view class='order-list-item'>
+          <image src='../../assets/img/thh.png'></image>
+          <view>退换货</view>
+        </view>
+      </view>
+      <view class='transparent-line'></view>
+      <view class='line-model'>
+        <image src='../../assets/img/vip.png'></image>
+        <text class='my-order'>会员中心</text>
+        <text class='all-order'>享等级特权</text>
+      </view>
+      <view class='line-model'>
+        <image src='../../assets/img/qyg.png'></image>
+        <text class='my-order'>企业购</text>
+      </view>
+      <view class='line-model'>
+        <image src='../../assets/img/kfzx.png'></image>
+        <text class='my-order'>在线客服</text>
+      </view>
+      <view class='transparent-line'></view>
+    </view>
+  </view>
+</view>

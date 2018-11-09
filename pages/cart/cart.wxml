@@ -1,0 +1,70 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <!-- <view class='cart-empty'>
+    <image src='https://wap.fruitday.com/content/images/main/cart_empty-172251d77c.png'></image>
+    <view class='txt'>还没找到心仪的商品吗?</view>
+    <view class='go-home'>去逛逛吧</view>
+  </view> -->
+  <view class='cart-container'>
+    <view class='title'>
+      <view class='title-name'>商品清单</view>
+      <view class='all-weight'>总重约0kg</view>
+    </view>
+    <view class='cart-list'>
+      <view class='cart-list-item' wx:for="{{cartGroup}}" wx:key="{{item.id}}">
+        <view class='select'>
+          <checkbox checked=''></checkbox>
+        </view>
+        <view class='pro-desc'>
+          <view class='pro-img'>
+            <image src='{{item.middle_photo}}'></image>
+          </view>
+          <view class='pro-info'>
+            <view class='pro-name'>
+              <text>{{item.product_name}}</text>
+            </view>
+            <view class='pro-weight'>
+              <text class='white-space'><text>{{item.volume}}</text></text>kg
+            </view>
+            <view class='pro-price'>
+              <text class='small'>￥</text>
+              <text class='big'>{{item.price}}</text>
+              <text class='pro-time'>明日达</text>
+            </view>
+          </view>
+        </view>
+        <view class='delete-area'>
+          <image src='../../assets/img/del.png'></image>
+        </view>
+        <view class='count'>
+          <view class='reduce-area'>
+            <view class='reduce'>-</view>
+          </view>
+          <view class='num'>{{item.count}}</view>
+          <view class='add-area'>
+            <view class='add'>+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='all-select'>
+      <checkbox></checkbox>
+      <text class='all-select-txt'>全选</text>
+    </view>
+    <view class='footer-info'>
+      <view class='total'>
+        <text class='total-txt'>合计：</text>
+        <text class='small'>￥</text>
+        <text class='big'>0</text>
+        <text class='small'>0</text>
+      </view>
+      <view class='empty hide'>
+        <text>清空购物车</text>
+      </view>
+    </view>
+    <view class='account dis'>结算（0）</view>
+    <view class='delete hide dis'>删除</view>
+  </view>
+</view>

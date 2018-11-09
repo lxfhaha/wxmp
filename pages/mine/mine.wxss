@@ -1,0 +1,84 @@
+/* pages/mine/mine.wxss */
+.user-info {
+  width: 100%;
+  height: 190px;
+  background: url("https://wap.fruitday.com/content/images/me/login-bg.png") no-repeat;
+}
+.user-info-wrap {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-img,.user-img image {
+  width: 62px;
+  height: 62px;
+}
+.user-img image {
+  border-radius: 50%;
+}
+.user-account {
+  font-weight: normal;
+  font-size: 16px;
+}
+.user-nav {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.user-nav-list {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 14px;
+  color: #000;
+}
+.num {
+  color: #ff7e05;
+  font-size: 15px;
+}
+.line-model {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ece9e5;
+  background: rgba(255,255,255,.6);
+}
+.line-model image {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+}
+.my-order {
+  color: #3a3a3a;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.all-order {
+  color: #878787;
+  font-size: 13px;
+  margin-left: 185px;
+}
+.order-list {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+.order-list-item image {
+  width: 22px;
+  height: 22px;
+}
+.order-list-item>view {
+  font-size: 14px;
+}
+.transparent-line {
+  height: 8px;
+  background-color: #dedede;
+}

@@ -1,0 +1,113 @@
+/* pages/home/home.wxss */
+image{
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.banner{
+  height: 110px;
+  position: relative;
+}
+.banner>image{
+  position:absolute;
+	width:100%;
+  height: 100%;
+  display: block;
+}
+.img-banner{
+  margin-top: 10px;
+  width: 100%;
+  height: 231px;
+}
+.img-banner .left,.img-banner .right{
+  width: 49%;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+.img-banner .left>image,.img-banner .right>image{
+  top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+  height: 100%;
+	margin:auto;
+  display: block;
+}
+.img-banner .right{
+  float: right;
+}
+.img-banner .right>image{
+  height: 49%;
+}
+.img-banner .right>image:last-child{
+  margin-top: 2%;
+}
+.img-title-banner{
+  margin-top: 10px;
+  width: 100%;
+  height: 64px;
+  position: relative;
+}
+.img-title-banner>image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.recommends{
+  margin-top: 10px;
+  width: 100%;
+}
+.recommends-list{
+  height: 160px;
+}
+.img-box{
+  width: 120px;
+  height: 120px;
+  position: relative;
+  float: left;
+}
+.img-box>image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.info{
+  width: 193px;
+  height: 110px;
+  float: left;
+}
+.name{
+  font-size: 18px;
+  display: block;
+}
+.desc{
+  font-size: 15px;
+  color: #878787;
+}
+.tag{
+  width: 80px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #ff8a65;
+  border-radius: 10%;
+  margin-top: 10px;
+}
+.price{
+  font-size: 16px;
+  color: #ff8000;
+  margin-top: 5px;
+}
+.money{
+  font-size: 16px;
+}
+.weight{
+  font-size: 13px;
+}

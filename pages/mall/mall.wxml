@@ -1,0 +1,32 @@
+<!--pages/mall/mall.wxml-->
+<view>
+  <scroll-view class='container category'>
+    <view class='mall-category'>
+      <view class='tab-list'>
+        <view class="{{idChecked === item.id ?'active':'tab-list-item'}}" bindtap='tabListChange' wx:for="{{tablists}}" wx:key="{{item.id}}" data-id='{{item.id}}'>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='product-list'>
+    <view class='list-item' wx:for="{{products}}" wx:key="{{item.id}}">
+      <view class='img-wrap'>
+        <image  src='{{item.middle_photo}}' bindtap='goToDetail' data-id='{{item.id}}' style='width:105px;height:105px;'></image>
+      </view>
+      <view class='pro-info' bindtap='goToDetail'  data-id='{{item.id}}'>
+        <view class='pro-name'><text>{{item.product_name}}</text></view>
+        <view class='pro-desc'><text>{{item.product_desc}}</text></view>
+        <view class='pro-weight'><text>{{item.volume}}</text></view>
+        <view class='pro-price'>
+          <text class='small'>￥</text>
+          <text class='big'>{{item.price}}</text>
+          <text class='pro-time' style='background: #FF8000;'>明日达</text>
+        </view>
+      </view>
+      <view class='pro-count'>
+        <view class='add-btn' bindtap='addToCart' data-id='{{item.id}}'>+</view>
+      </view>
+    </view>
+  </view>
+</view>

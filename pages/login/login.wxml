@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view style='height:100%;'>
+  <view class='login-content' style='height:100%;'>
+    <form class='login-form'>
+      <view class='username'>
+        <image src='../../assets/img/uname.png'></image>
+        <input type='text' placeholder='用户名'></input>
+      </view>
+      <view class='pwd'>
+        <image src='../../assets/img/pwd.png'></image>
+        <input password='true' placeholder='密码'></input>
+      </view>
+      <view class='login-btn'>
+        <button>登录</button>
+      </view>
+    </form>
+  </view>
+</view>

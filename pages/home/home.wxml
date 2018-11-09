@@ -1,0 +1,71 @@
+<!--pages/home/home.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <view class='banner'>
+    <image src='https://imgqn7.fruitday.com/images/2018-10-31/5bf77b9f2cf11251c63a89cb66a6cc7c.jpg' />
+  </view>
+  <view class='img-banner'>
+    <view class='left'>
+      <image src='https://imgqn2.fruitday.com/images/2018-10-08/7573b94de86dd0a84e0fa80a4c50a636.jpg' />
+    </view>
+    <view class='right'>
+      <image src='https://imgqn5.fruitday.com/images/2018-11-02/0421e4316085891ac836f2cf8d4015d4.jpg' />
+      <image src='https://imgqn5.fruitday.com/images/2018-09-30/7363b65ace08e755d08801cbe2719c6b.jpg' />
+    </view>
+  </view>
+  <view class='img-title-banner'>
+    <image src='https://imgqn2.fruitday.com/images/2018-09-12/29312f0b40cfc5b9bf4b15a9bdac507e.jpg' />
+  </view>
+  <view class='recommends'>
+    <view class='recommends-list'>
+      <view class='img-box'>
+        <image src='https://imgqn1.fruitday.com/images/product_pic/3323/1/1-370x370-3323-SC1U63C2.jpg' />
+      </view>
+      <view class='info'>
+        <text class='name'>秋月梨</text>
+        <text class='desc'>足月才采摘 甜味正浓时</text>
+        <view class='tag'>售完下架</view>
+        <view class='price'>
+          <text class='money'>￥59.9 / </text>
+          <text class='weight'>2kg/单斤14.98元</text>
+        </view>
+      </view>
+    </view>
+    <view class='recommends-list'>
+      <view class='img-box'>
+        <image src='https://imgqn7.fruitday.com/images/product_pic/5963/1/1-370x370-5963-FF9SU33A.jpg' />
+      </view>
+      <view class='info'>
+        <text class='name'>五常五府坊原味香米</text>
+        <text class='desc'>软糯五常好米 煮饭熬粥皆宜</text>
+        <view class='tag'>领券减20元</view>
+        <view class='price'>
+          <text class='money'>￥89 / </text>
+          <text class='weight'>5kg</text>
+        </view>
+      </view>
+    </view>
+    <view class='recommends-list'>
+      <view class='img-box'>
+        <image src='https://imgqn9.fruitday.com/images/product_pic/6019/1/1-370x370-6019-FTKPBTKH.jpg' />
+      </view>
+      <view class='info'>
+        <text class='name'>格拉伯爵干红葡萄酒</text>
+        <text class='desc'>西班牙经典 果香柔顺的丝滑​</text>
+        <view class='tag'>特惠39.9</view>
+        <view class='price'>
+          <text class='money'>￥39.9 / </text>
+          <text class='weight'> 750ml</text>
+        </view>
+      </view>
+    </view>
+
+  </view> 
+</view>

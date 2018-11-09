@@ -1,0 +1,27 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+    circular="{{circular}}" style='height:375px;'>
+    <block style='height:375px;'>
+      <swiper-item style='height:375px;'>
+        <image src="{{productinfo.templatePhoto[0].image}}" wx:key="{{item.productItem[0].id}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='info-item' wx:key="{{item.productItem[0].id}}">
+    <view class='name'><text>{{productinfo.productInfo.product_name}}</text></view>
+    <view class='desc'><text>{{productinfo.productInfo.product_desc}}</text></view>
+    <view class='price'>
+      <text class='small colorful'>￥</text>
+      <text class='big colorful'>{{productinfo.productItem[0].price}}</text>
+      <text class='small line'>￥{{productinfo.productInfo.old_price}}</text>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='cart-btn'>
+      <image src='../../assets/img/cartbtn.png'></image>
+    </view>
+    <view class='add-cart'>加入购物车</view>
+  </view>
+</view>
