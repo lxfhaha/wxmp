@@ -1,19 +1,20 @@
 <!--pages/cart/cart.wxml-->
 <view>
-  <!-- <view class='cart-empty'>
+  <view class='cart-empty' hidden='{{isCartNull}}'>
     <image src='https://wap.fruitday.com/content/images/main/cart_empty-172251d77c.png'></image>
     <view class='txt'>还没找到心仪的商品吗?</view>
-    <view class='go-home'>去逛逛吧</view>
-  </view> -->
-  <view class='cart-container'>
+    <view class='go-home' bindtap='goToHomePage'>去逛逛吧</view>
+  </view>
+  <view class='cart-container' hidden='{{isHidden}}'>
     <view class='title'>
       <view class='title-name'>商品清单</view>
       <view class='all-weight'>总重约0kg</view>
     </view>
     <view class='cart-list'>
-      <view class='cart-list-item' wx:for="{{cartGroup}}" wx:key="{{item.id}}">
+      <checkbox-group bindchange="checkboxChange">
+        <view class='cart-list-item' wx:for="{{cartGroup}}" wx:key="{{item.id}}">
         <view class='select'>
-          <checkbox checked=''></checkbox>
+          <checkbox checked='{{item.checked}}' value='{{item.id}}' data-id='{{item.id}}'></checkbox>
         </view>
         <view class='pro-desc'>
           <view class='pro-img'>
@@ -33,32 +34,34 @@
             </view>
           </view>
         </view>
-        <view class='delete-area'>
+        <view class='delete-area' bindtap='delCartProduct' data-id='{{item.id}}'>
           <image src='../../assets/img/del.png'></image>
         </view>
         <view class='count'>
           <view class='reduce-area'>
-            <view class='reduce'>-</view>
+            <view class='reduce' data-id="{{item.id}}" bindtap='reduceProductCount'>-</view>
           </view>
           <view class='num'>{{item.count}}</view>
           <view class='add-area'>
-            <view class='add'>+</view>
+            <view class='add' data-id="{{item.id}}" bindtap='addProductCount'>+</view>
           </view>
         </view>
       </view>
+      </checkbox-group>
     </view>
   </view>
-  <view class='footer'>
+  <view class='footer' hidden='{{isHidden}}'>
     <view class='all-select'>
-      <checkbox></checkbox>
-      <text class='all-select-txt'>全选</text>
+      <checkbox-group bindchange="allCheckboxChange">
+        <checkbox checked='{{isAllSelected}}' value='isAllchecked'></checkbox>
+        <text class='all-select-txt'>全选</text>
+      </checkbox-group>
     </view>
     <view class='footer-info'>
       <view class='total'>
         <text class='total-txt'>合计：</text>
         <text class='small'>￥</text>
-        <text class='big'>0</text>
-        <text class='small'>0</text>
+        <text class='big'>{{totalMoney}}</text>
       </view>
       <view class='empty hide'>
         <text>清空购物车</text>

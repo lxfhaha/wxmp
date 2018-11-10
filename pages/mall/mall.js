@@ -14,11 +14,10 @@ Page({
    * 左侧商品分类切换
    */
   tabListChange(e) {
-    console.log(e)
-    console.log(this)
+    // console.log(e)
+    // console.log(this)
     const currentList = this.data.tablists.filter(item => item.id === e.currentTarget.dataset.id)[0];
-    //this.data.tablists.filter(item => {console.log(item)});
-    console.log(currentList.id);
+    // console.log(currentList.id);
     this.setData({
       toListId: currentList.id
     });
@@ -30,7 +29,7 @@ Page({
    * 点击跳转到详情页
    */
   goToDetail(e) {
-    console.log(e)
+    // console.log(e)
     wx.navigateTo({
       url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}`,
     })
@@ -48,11 +47,11 @@ Page({
    * 加载商品列表，与左侧商品分类对应
    */
   loadProductList: function () {
-    console.log(this)
+    // console.log(this)
     wx.request({
       url: `https://wap.fruitday.com/v3/product/sub_category_list?store_id_list=2&class2_id=${this.data.toListId}&class3_id=0&sort_type=1&tms_region_type=1`,
       success: (res) => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           products: res.data.data.productGroup
         });

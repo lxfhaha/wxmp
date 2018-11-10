@@ -3,9 +3,9 @@
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
     circular="{{circular}}" style='height:375px;'>
-    <block style='height:375px;'>
+    <block style='height:375px;' wx:for="{{imgUrls}}" wx:key="{{index}}" data-id="{{item.id}}">
       <swiper-item style='height:375px;'>
-        <image src="{{productinfo.templatePhoto[0].image}}" wx:key="{{item.productItem[0].id}}" class="slide-image"/>
+        <image src="{{item.image}}" wx:key="{{item.id}}" class="slide-image"/>
       </swiper-item>
     </block>
   </swiper>
